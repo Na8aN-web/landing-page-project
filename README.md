@@ -81,6 +81,9 @@ This implementation is based on the following Figma design:
 git clone https://github.com/Na8aN-web/landing-page-project.git
 ```
 
+## Deployment Link
+https://landing-page-project-theta-smoky.vercel.app/
+
 2. Open `index.html` in your browser to view the page.
 
 ## Project Goals

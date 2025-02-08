@@ -5,51 +5,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>landing page project</title>
+    <link href="./style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <section>
-            <div>
-                <img src="./assets/images/logo.png" alt="logo" />
+        <section class="header-nav">
+            <div class="logo-container">
+                <img src="./assets/images/logo.png" alt="logo" class="logo" />
             </div>
-            <nav>
+
+            <button class="hamburger" id="hamburger">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="nav-links">
                 <a href="#">Home</a>
                 <a href="#">Course</a>
                 <a href="#">About us</a>
                 <a href="#">Article</a>
                 <a href="#">Contact</a>
+                <div class="auth-buttons">
+                    <button class="btn btn-outline">Log in</button>
+                    <button class="btn btn-primary">Register</button>
+                </div>
             </nav>
-            <div>
-                <button>Log in</button>
-                <button>Register</button>
-            </div>
         </section>
 
-        <section>
-            <div>
-                <h4>Let's Begin</h4>
-                <h1>Let's Find The <br> Right Course For <br> you</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non convallis molestie.
-                </p>
-                <div>
-                    <button>Register</button>
-                    <button><img src="./assets/icons/play-button.png" alt="play-button" /> Video</button>
+
+        <section class="hero">
+            <div class="hero-text">
+                <h4 class="text-primary">Let's Begin</h4>
+                <h1 class="heading-lg">Let's Find The <br> Right Course For <br> You</h1>
+                <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non
+                    convallis molestie.</p>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary">Register</button>
+                    <button class="btn">
+                        <img src="./assets/icons/play-button.png" alt="play-button" class="icon" /> Play Video
+                    </button>
                 </div>
             </div>
-            <div>
-                <img src="./assets/images/hero-image.png" alt="hero-image" />
+            <div class="hero-image-container">
+                <img src="./assets/images/hero-image.png" alt="hero-image" class="hero-image" />
             </div>
         </section>
     </header>
 
     <main>
-        <section aria-labelledby="features-heading">
-            <h4>WHAT WE GIVE</h4>
-            <h2 id="features-heading">What do You Get From Us</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non convallis molestie.</p>
-
+        <section aria-labelledby="features-heading" class="section features-section">
+            <h4 class="text-primary">WHAT WE GIVE</h4>
             <div class="features">
+                <div>
+                    <h2 id="features-heading" class="heading-md">What do You <br>Get From Us</h2>
+                    <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim,
+                        sem
+                        non
+                        convallis molestie.</p>
+                </div>
                 <article>
                     <img src="./assets/icons/1.png" alt="teacher" />
                     <h3>Professional Teacher</h3>
@@ -72,167 +90,235 @@
                 </article>
             </div>
 
-            <div>
+            <div class="pagination">
                 <button><img src="./assets/icons/prev.png" alt="previous" /></button>
                 <button><img src="./assets/icons/next.png" alt="next" /></button>
             </div>
         </section>
 
-        <section aria-labelledby="stats-heading">
-            <div>
-                <img src="./assets//images/selected-courses.png" alt="selected-courses" />
+        <section class="selected-course">
+            <div class="selected-course__image">
+                <img src="./assets/images/selected-courses.png" alt="selected courses illustration" />
             </div>
-            <h4>SELECTED COURSE</h4>
-            <h2 id="stats-heading">People Taking Courses</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non convallis molestie.</p>
+            <div class="selected-course__content">
+                <span class="text-primary">SELECTED COURSE</span>
+                <h2 class="heading-md">People Taking Courses</h2>
+                <p class="paragraph">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non convallis
+                    molestie.
+                </p>
 
-            <dl>
-                <dt>People Views</dt>
-                <dd>6,000</dd>
-
-                <dt>User</dt>
-                <dd>4,000</dd>
-
-                <dt>Course</dt>
-                <dd>100</dd>
-            </dl>
+                <dl class="selected-course__stats">
+                    <div class="selected-course__stat">
+                        <dt>6,000</dt>
+                        <dd>People Views</dd>
+                    </div>
+                    <div class="selected-course__stat">
+                        <dt>4,000</dt>
+                        <dd>Users</dd>
+                    </div>
+                    <div class="selected-course__stat">
+                        <dt>100</dt>
+                        <dd>Courses</dd>
+                    </div>
+                </dl>
+            </div>
         </section>
 
-        <section aria-labelledby="courses-heading">
-            <div>
-                <h4>AVAILABLE FOR YOU</h4>
-                <h2 id="courses-heading">Available Courses</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem non convallis molestie.
-                </p>
-                <button>See all</button>
+        <section aria-labelledby="courses-heading" class="section courses-section">
+            <div class="courses-section__header">
+                <span class="text-primary">AVAILABLE FOR YOU</span>
+                <h2 id="courses-heading" class="heading-md">Available Courses</h2>
+                <p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam dignissim, sem
+                    non convallis molestie.</p>
+                <button class="btn btn-primary">See all</button>
             </div>
 
             <div class="courses-grid">
-                <article>
-                    <div>
-                        <img src="./assets/images/available1.png" alt="course 1" />
-                        <p>$20 USD</p>
-                        <h5>Best Course</h5>
+                <article class="course-card">
+                    <div class="course-card__image-container">
+                        <img src="./assets/images/available1.png" alt="HTML & CSS Course" class="course-card__image" />
+                        <span class="course-card__price">$20 USD</span>
+                        <span class="course-card__badge">Best Course</span>
                     </div>
-                    <h3>HTML & CSS</h3>
-                    <p>1500 Views</p>
-                    <p>120 Videos - 2 Teacher</p>
+                    <div class="course-card__content">
+                        <h3 class="course-card__title">HTML & CSS</h3>
+                        <div class="course-card__meta">
+                            <span>1500 Views</span>
+                            <span>120 Videos - 2 Teachers</span>
+                        </div>
+                    </div>
                 </article>
 
-                <article>
-                    <div>
-                        <img src="./assets/images/available2.png" alt="course2" />
-                        <p>$20 USD</p>
-                        <h5>Best Course</h5>
+                <article class="course-card">
+                    <div class="course-card__image-container">
+                        <img src="./assets/images/available2.png" alt="Photographer Course"
+                            class="course-card__image" />
+                        <span class="course-card__price">$20 USD</span>
+                        <span class="course-card__badge">Best Course</span>
                     </div>
-                    <h3>Photographer</h3>
-                    <p>1500 Views</p>
-                    <p>100 Videos - 2 Teacher</p>
+                    <div class="course-card__content">
+                        <h3 class="course-card__title">Photographer</h3>
+                        <div class="course-card__meta">
+                            <span>1500 Views</span>
+                            <span>100 Videos - 2 Teachers</span>
+                        </div>
+                    </div>
                 </article>
 
-                <article>
-                    <div>
-                        <img src="./assets/images/available3.png" alt="course3" />
-                        <p>$20 USD</p>
-                        <h5>Best Course</h5>
+                <article class="course-card">
+                    <div class="course-card__image-container">
+                        <img src="./assets/images/available3.png" alt="JavaScript Course" class="course-card__image" />
+                        <span class="course-card__price">$20 USD</span>
+                        <span class="course-card__badge">Best Course</span>
                     </div>
-                    <h3>JavaScript</h3>
-                    <p>1500 Views</p>
-                    <p>120 Videos - 2 Teacher</p>
+                    <div class="course-card__content">
+                        <h3 class="course-card__title">JavaScript</h3>
+                        <div class="course-card__meta">
+                            <span>1500 Views</span>
+                            <span>120 Videos - 2 Teachers</span>
+                        </div>
+                    </div>
                 </article>
 
-                <article>
-                    <div>
-                        <img src="./assets/images/available4.png" alt="course4" />
-                        <p>$20 USD</p>
-                        <h5>Best Course</h5>
+                <article class="course-card">
+                    <div class="course-card__image-container">
+                        <img src="./assets/images/available4.png" alt="Desain Grafis Course"
+                            class="course-card__image" />
+                        <span class="course-card__price">$20 USD</span>
+                        <span class="course-card__badge">Best Course</span>
                     </div>
-                    <h3>Desain Grafis</h3>
-                    <p>1500 Views</p>
-                    <p>100 Videos - 2 Teacher</p>
+                    <div class="course-card__content">
+                        <h3 class="course-card__title">Desain Grafis</h3>
+                        <div class="course-card__meta">
+                            <span>1500 Views</span>
+                            <span>100 Videos - 2 Teachers</span>
+                        </div>
+                    </div>
                 </article>
             </div>
         </section>
 
-        <section aria-labelledby="testimonials-heading">
-            <h2 id="testimonials-heading">Testimonials</h2>
+        <section class="testimonials-section" aria-labelledby="testimonials-heading">
+            <h2 id="testimonials-heading" class="heading-md">Testimonials</h2>
+            <div class="testimonials-grid">
+                <article class="testimonial-card">
+                    <div class="testimonial-card__header">
+                        <img src="./assets/images/testimonial1.png" alt="Friskidia" class="testimonial-card__avatar" />
+                        <div class="testimonial-card__author">
+                            <cite class="testimonial-card__name">Friskidia</cite>
+                            <p class="testimonial-card__role">Client</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card__rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-card__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                        rutrum dapibus luctus.</p>
+                </article>
 
-            <article>
-                <div>
-                    <img src="./assets/images/testimonial1.png" alt="testimonial1" />
-                    <cite>Friskidia</cite>
-                    <p>Client</p>
-                </div>
-                <div class="rating">
-                    <img src="./assets/icons/rating.png" alt="rating" />
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum dapibus luctus.</p>
-            </article>
-
-            <article>
-                <div>
-                    <img src="./assets/images/testimonial2.png" alt="testimonial2" />
-                    <cite>Friskidia</cite>
-                    <p>Client</p>
-                </div>
-                <div class="rating">
-                    <img src="./assets/icons/rating.png" alt="rating" />
-                </div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec rutrum dapibus luctus.</p>
-            </article>
+                <article class="testimonial-card">
+                    <div class="testimonial-card__header">
+                        <img src="./assets/images/testimonial2.png" alt="Finkildia" class="testimonial-card__avatar" />
+                        <div class="testimonial-card__author">
+                            <cite class="testimonial-card__name">Finkildia</cite>
+                            <p class="testimonial-card__role">Client</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card__rating">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-card__quote">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+                        rutrum dapibus luctus.</p>
+                </article>
+            </div>
         </section>
+
     </main>
 
-    <footer>
-        <div>
-            <img src="./assets/images/logo.png" alt="logo" />
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, justo nec porttitor dapibus, erat
-                sapien faucibus lectus.</p>
-            <div class="social-links" aria-label="Social media">
-                <img src="./assets/icons/facebook.png" alt="facebook" />
-                <img src="./assets/icons/twitter.png" alt="twitter" />
-                <img src="./assets/icons/linkedin.png" alt="linkedin" />
-                <img src="./assets/icons/insta.png" alt="insta" />
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Logo and Description Section -->
+            <div class="footer-brand">
+                <img src="./assets/images/logo.png" alt="logo" class="footer-logo" />
+                <p class="footer-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mollis, justo nec porttitor dapibus,
+                    erat
+                    sapien faucibus lectus.
+                </p>
+                <div class="social-links" aria-label="Social media">
+                    <a href="#" aria-label="Facebook">
+                        <img src="./assets/icons/facebook.png" alt="facebook" />
+                    </a>
+                    <a href="#" aria-label="Twitter">
+                        <img src="./assets/icons/twitter.png" alt="twitter" />
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <img src="./assets/icons/linkedin.png" alt="linkedin" />
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <img src="./assets/icons/insta.png" alt="instagram" />
+                    </a>
+                </div>
             </div>
+
+            <!-- Navigation Links -->
+            <nav class="footer-nav">
+                <div class="footer-nav-column">
+                    <h3>Home</h3>
+                    <a href="#">Product</a>
+                    <a href="#">Course</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Log In</a>
+                </div>
+
+                <div class="footer-nav-column">
+                    <h3>Course</h3>
+                    <a href="#">HTML & CSS</a>
+                    <a href="#">Javascript</a>
+                    <a href="#">Photographer</a>
+                    <a href="#">Desain Grafis</a>
+                </div>
+
+                <div class="footer-nav-column">
+                    <h3>Article</h3>
+                    <a href="#">New</a>
+                    <a href="#">Old</a>
+                    <a href="#">Trend</a>
+                    <a href="#">Popular</a>
+                </div>
+
+                <div class="footer-nav-column">
+                    <h3>Contact Us</h3>
+                    <p class="contact-email">Contact123@gmail.com</p>
+                </div>
+            </nav>
         </div>
-
-        <nav>
-            <div>
-                <h3>Home</h3>
-
-                <a href="#">Product</a>
-                <a href="#">Course</a>
-                <a href="#">About Us</a>
-                <a href="#">Log In</a>
-
-            </div>
-
-            <div>
-                <h3>Course</h3>
-
-                <a href="#">HTML & CSS</a>
-                <a href="#">Javascript</a>
-                <a href="#">Photographer</a>
-                <a href="#">Desain Grafis</a>
-
-            </div>
-
-            <div>
-                <h3>Article</h3>
-
-                <a href="#">New</a>
-                <a href="#">Old</a>
-                <a href="#">Trend</a>
-                <a href="#">Popular</a>
-
-            </div>
-
-            <div>
-                <h3>Contact Us</h3>
-                <p>Contact123@gmail.com</p>
-            </div>
-        </nav>
     </footer>
 </body>
 
 </html>
+
+<script>
+    document.addEventListener('click', function (event) {
+        const navLinks = document.getElementById('nav-links');
+        const hamburger = document.getElementById('hamburger');
+
+        if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+            navLinks.classList.remove('active');
+        }
+    });
+
+    // Prevent the click inside the menu from closing it
+    document.getElementById('nav-links').addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+</script>
